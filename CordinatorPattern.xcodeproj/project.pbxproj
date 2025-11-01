@@ -8,22 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		605511DF2EB67BD100B5989D /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605511DE2EB67BD100B5989D /* ApplicationCoordinator.swift */; };
-		605511E12EB67BF400B5989D /* BaseCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605511E02EB67BF400B5989D /* BaseCordinator.swift */; };
+		605511E12EB67BF400B5989D /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605511E02EB67BF400B5989D /* BaseCoordinator.swift */; };
+		605511E52EB6891500B5989D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605511E42EB6891500B5989D /* LoginView.swift */; };
+		605511E82EB689F100B5989D /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605511E72EB689F100B5989D /* EmailField.swift */; };
+		605511EB2EB68AB000B5989D /* DefaultTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605511EA2EB68AB000B5989D /* DefaultTextFieldStyle.swift */; };
+		605511ED2EB68C9700B5989D /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605511EC2EB68C9700B5989D /* PasswordField.swift */; };
+		605511EF2EB68E0C00B5989D /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605511EE2EB68E0C00B5989D /* LoginViewModel.swift */; };
+		605511F22EB68F1B00B5989D /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605511F12EB68F1B00B5989D /* BaseViewModel.swift */; };
+		605511F42EB68F7C00B5989D /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605511F32EB68F7C00B5989D /* HostingController.swift */; };
+		605511F62EB6931B00B5989D /* AuthCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605511F52EB6931B00B5989D /* AuthCordinator.swift */; };
+		605511FA2EB6982000B5989D /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605511F92EB6982000B5989D /* RegisterView.swift */; };
+		605511FC2EB6985100B5989D /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 605511FB2EB6985100B5989D /* RegisterViewModel.swift */; };
 		60FECCC92EB60DED006BE233 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60FECCC22EB60DED006BE233 /* Assets.xcassets */; };
 		60FECCCB2EB60DED006BE233 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60FECCC52EB60DED006BE233 /* LaunchScreen.storyboard */; };
 		60FECCCC2EB60DEE006BE233 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FECCC12EB60DED006BE233 /* AppDelegate.swift */; };
-		60FECCD12EB60EC7006BE233 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60FECCD02EB60EC7006BE233 /* MainView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		605511DE2EB67BD100B5989D /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
-		605511E02EB67BF400B5989D /* BaseCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCordinator.swift; sourceTree = "<group>"; };
+		605511E02EB67BF400B5989D /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		605511E42EB6891500B5989D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		605511E72EB689F100B5989D /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
+		605511EA2EB68AB000B5989D /* DefaultTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTextFieldStyle.swift; sourceTree = "<group>"; };
+		605511EC2EB68C9700B5989D /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
+		605511EE2EB68E0C00B5989D /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		605511F12EB68F1B00B5989D /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		605511F32EB68F7C00B5989D /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		605511F52EB6931B00B5989D /* AuthCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCordinator.swift; sourceTree = "<group>"; };
+		605511F92EB6982000B5989D /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		605511FB2EB6985100B5989D /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		60FECCA92EB60CE0006BE233 /* CordinatorPattern.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CordinatorPattern.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60FECCC12EB60DED006BE233 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60FECCC22EB60DED006BE233 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60FECCC32EB60DED006BE233 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60FECCC42EB60DED006BE233 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		60FECCD02EB60EC7006BE233 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				605511DE2EB67BD100B5989D /* ApplicationCoordinator.swift */,
+				605511F72EB6932300B5989D /* Flows */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -48,9 +67,62 @@
 		605511E22EB67BFA00B5989D /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
-				605511E02EB67BF400B5989D /* BaseCordinator.swift */,
+				605511E02EB67BF400B5989D /* BaseCoordinator.swift */,
 			);
 			path = Supporting;
+			sourceTree = "<group>";
+		};
+		605511E32EB6890400B5989D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				605511E42EB6891500B5989D /* LoginView.swift */,
+				605511EE2EB68E0C00B5989D /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		605511E62EB689B000B5989D /* Shared Views */ = {
+			isa = PBXGroup;
+			children = (
+				605511E72EB689F100B5989D /* EmailField.swift */,
+				605511EC2EB68C9700B5989D /* PasswordField.swift */,
+				605511E92EB68A6900B5989D /* TextField Styles */,
+			);
+			path = "Shared Views";
+			sourceTree = "<group>";
+		};
+		605511E92EB68A6900B5989D /* TextField Styles */ = {
+			isa = PBXGroup;
+			children = (
+				605511EA2EB68AB000B5989D /* DefaultTextFieldStyle.swift */,
+			);
+			path = "TextField Styles";
+			sourceTree = "<group>";
+		};
+		605511F02EB68F0700B5989D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				605511F12EB68F1B00B5989D /* BaseViewModel.swift */,
+				605511F32EB68F7C00B5989D /* HostingController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		605511F72EB6932300B5989D /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				605511F52EB6931B00B5989D /* AuthCordinator.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		605511F82EB6980C00B5989D /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				605511F92EB6982000B5989D /* RegisterView.swift */,
+				605511FB2EB6985100B5989D /* RegisterViewModel.swift */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		60FECCA02EB60CE0006BE233 = {
@@ -72,12 +144,14 @@
 		60FECCC82EB60DED006BE233 /* CordinatorPattern */ = {
 			isa = PBXGroup;
 			children = (
-				60FECCC32EB60DED006BE233 /* Info.plist */,
+				605511F02EB68F0700B5989D /* Core */,
 				60FECCC12EB60DED006BE233 /* AppDelegate.swift */,
 				60FECCC22EB60DED006BE233 /* Assets.xcassets */,
 				605511DD2EB67BA500B5989D /* Coordinators */,
+				60FECCC32EB60DED006BE233 /* Info.plist */,
 				60FECCC52EB60DED006BE233 /* LaunchScreen.storyboard */,
 				60FECCCF2EB60E98006BE233 /* Screens */,
+				605511E62EB689B000B5989D /* Shared Views */,
 				605511E22EB67BFA00B5989D /* Supporting */,
 			);
 			path = CordinatorPattern;
@@ -86,7 +160,8 @@
 		60FECCCF2EB60E98006BE233 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				60FECCD02EB60EC7006BE233 /* MainView.swift */,
+				605511F82EB6980C00B5989D /* Register */,
+				605511E32EB6890400B5989D /* Login */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -164,10 +239,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				605511EB2EB68AB000B5989D /* DefaultTextFieldStyle.swift in Sources */,
+				605511F22EB68F1B00B5989D /* BaseViewModel.swift in Sources */,
+				605511F62EB6931B00B5989D /* AuthCordinator.swift in Sources */,
 				60FECCCC2EB60DEE006BE233 /* AppDelegate.swift in Sources */,
-				60FECCD12EB60EC7006BE233 /* MainView.swift in Sources */,
+				605511E82EB689F100B5989D /* EmailField.swift in Sources */,
 				605511DF2EB67BD100B5989D /* ApplicationCoordinator.swift in Sources */,
-				605511E12EB67BF400B5989D /* BaseCordinator.swift in Sources */,
+				605511ED2EB68C9700B5989D /* PasswordField.swift in Sources */,
+				605511E52EB6891500B5989D /* LoginView.swift in Sources */,
+				605511FC2EB6985100B5989D /* RegisterViewModel.swift in Sources */,
+				605511E12EB67BF400B5989D /* BaseCoordinator.swift in Sources */,
+				605511FA2EB6982000B5989D /* RegisterView.swift in Sources */,
+				605511F42EB68F7C00B5989D /* HostingController.swift in Sources */,
+				605511EF2EB68E0C00B5989D /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

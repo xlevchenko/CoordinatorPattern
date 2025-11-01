@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-class ApplicationCoordinator: BaseCordinator<UINavigationController> {
+class ApplicationCoordinator: BaseCoordinator<UINavigationController> {
     
     let window: UIWindow
     
@@ -25,7 +25,7 @@ class ApplicationCoordinator: BaseCordinator<UINavigationController> {
     }
     
     override func start() {
-        startMain()
+        startAuth()
     }
 }
 
@@ -33,9 +33,21 @@ class ApplicationCoordinator: BaseCordinator<UINavigationController> {
 //MARK: - Showing Screens
 extension ApplicationCoordinator {
     
+    func startAuth() {
+        let authCoordinator = AuthCordinator(presenter: presenter)
+        authCoordinator.delegate = self
+        authCoordinator.start()
+        self.store(coordinator: authCoordinator)
+    }
+    
     func startMain() {
-        let view = MainView()
-        let controller = UIHostingController(rootView: view)
-        presenter.setViewControllers( [controller], animated: false)
+        
+    }
+}
+
+extension ApplicationCoordinator: AuthCordinatorDelegate {
+    func onAuthCordinationComplete(authCordinator: AuthCordinator) {
+        startMain()
+        self.free(coordinator: authCordinator)
     }
 }
