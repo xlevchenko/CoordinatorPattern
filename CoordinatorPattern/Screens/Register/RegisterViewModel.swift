@@ -33,16 +33,15 @@ extension RegisterView {
 
 
 //MARK: - Action
-
 extension RegisterView.ViewModel {
     func onRegisterTapped() {
-        navDelegate?.onRegisterLoginTapped()
-    }
-    
-    func onLoginTapped() {
         registrationSeccessfull = true
         alertTitle = "Registration Successfull!"
         alertMassage = "An Activation email has been sent to \(email)"
         showAlert = true
+    }
+    
+    func onLoginTapped() {
+        navDelegate?.onRegisterLoginTapped()
     }
 }

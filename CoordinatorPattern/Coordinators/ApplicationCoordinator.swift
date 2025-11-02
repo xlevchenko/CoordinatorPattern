@@ -41,13 +41,27 @@ extension ApplicationCoordinator {
     }
     
     func startMain() {
-        
+        let mainCoordinator = MainCoordinator(presenter: presenter)
+        mainCoordinator.delegate = self
+        mainCoordinator.start()
+        self.store(coordinator: mainCoordinator)
     }
 }
 
+
+//MARK: - AuthCordinatorDelegate
 extension ApplicationCoordinator: AuthCordinatorDelegate {
     func onAuthCordinationComplete(authCordinator: AuthCordinator) {
         startMain()
         self.free(coordinator: authCordinator)
+    }
+}
+
+
+//MARK: - MainCoordinatorDelegate
+extension ApplicationCoordinator: MainCoordinatorDelegate {
+    func onMainCoordinationComplete(cordinator: MainCoordinator) {
+        startAuth()
+        self.free(coordinator: cordinator)
     }
 }

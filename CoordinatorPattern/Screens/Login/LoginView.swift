@@ -23,7 +23,7 @@ struct LoginView: View {
                 .padding(.bottom, 10)
             
             Button("Submit") {
-                
+                viewModel.onSubmitTapped()
             }
             
             Spacer()

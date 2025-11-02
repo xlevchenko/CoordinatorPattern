@@ -32,7 +32,7 @@ extension LoginView {
 
 extension LoginView.ViewModel {
     
-    func onLoginTapped() {
+    func onSubmitTapped() {
         navDelegate?.onLoginLoginSuccessfull()
     }
     
