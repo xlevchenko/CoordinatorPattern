@@ -26,6 +26,11 @@ extension LoginView {
             !email.isEmpty && !password.isEmpty
         }
         
+        let userDefaults: UserDefaultsManager
+        
+        init(userDefaults: UserDefaultsManager) {
+            self.userDefaults = userDefaults
+        }
         
     }
 }
@@ -33,6 +38,7 @@ extension LoginView {
 extension LoginView.ViewModel {
     
     func onSubmitTapped() {
+        userDefaults.isLoggedIn = true
         navDelegate?.onLoginLoginSuccessfull()
     }
     

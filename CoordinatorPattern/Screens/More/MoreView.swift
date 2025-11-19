@@ -17,6 +17,12 @@ struct MoreView: View {
                 ListRow(title: "Account", systemImageName: "person.crop.circle") {
                     viewModel.onAccountTapped()
                 }
+                ListRow(title: "Locations", systemImageName: "mappin.and.ellipse") {
+                    viewModel.onLocationTapped()
+                }
+                ListRow(title: "Upgrade", systemImageName: "crown") {
+                    viewModel.onUpgradeTapped()
+                }
             }
         }
         .navigationBarBackButtonHidden()

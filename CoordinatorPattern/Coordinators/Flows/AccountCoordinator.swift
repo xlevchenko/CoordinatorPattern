@@ -28,7 +28,7 @@ extension AccountCoordinator {
     func showAccountScreen() {
         let viewModel = AccountView.ViewModel()
         viewModel.navDelegate = self
-        
+        viewModel.showExitButton = !enbeddedInExistingNavStack
         let view = AccountView(viewModel: viewModel)
         let controller = AccountHostingController(rootView: view, viewModel: viewModel)
         controller.hidesBottomBarWhenPushed = true
@@ -40,7 +40,7 @@ extension AccountCoordinator {
     func showEditAccountScreen() {
         let viewModel = EditAccountView.ViewModel()
         viewModel.navDelegate = self
-        
+
         let view = EditAccountView(viewModel: viewModel)
         let controller = EditAccountHostingController(rootView: view, viewModel: viewModel)
         presenter.pushViewController(controller, animated: true)

@@ -33,7 +33,7 @@ struct RegisterView: View {
         .alert(viewModel.alertTitle, isPresented: $viewModel.showAlert) {
             Button("OK" , role: .none) {
                 if viewModel.registrationSeccessfull {
-                    viewModel.onLoginTapped()
+                    viewModel.onRegisterComplete()
                 }
             }
         }

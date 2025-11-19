@@ -41,6 +41,10 @@ extension RegisterView.ViewModel {
         showAlert = true
     }
     
+    func onRegisterComplete() {
+        navDelegate?.onRegisterComplete()
+    }
+    
     func onLoginTapped() {
         navDelegate?.onRegisterLoginTapped()
     }

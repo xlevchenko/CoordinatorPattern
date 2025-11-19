@@ -12,7 +12,7 @@ protocol MoreDelegate: AnyObject {
     func onMoreLogoutTapped(cordinator: MoreCoordinator)
 }
 
-class MoreCoordinator: BaseCoordinator<UINavigationController> {
+class MoreCoordinator: BaseCoordinator<UINavigationController>, UpgradeCoordinating {
     
     weak var delegate: MoreDelegate?
     
@@ -42,7 +42,15 @@ private extension MoreCoordinator {
 private extension MoreCoordinator {
     
     func startAccountFlow() {
-        let coordinator = AccountCoordinator(presenter: presenter)
+        let coordinator = AccountCoordinator(presenter: presenter, modelLayer: modelLayer)
+        coordinator.delegate = self
+        coordinator.start()
+        
+        store(coordinator: coordinator)
+    }
+    
+    func startLocationsFlow() {
+        let coordinator = AccountCoordinator(presenter: presenter, modelLayer: modelLayer)
         coordinator.delegate = self
         coordinator.start()
         
@@ -58,11 +66,11 @@ extension MoreCoordinator: MoreViewDelegate {
     }
     
     func onMoreViewLocationTapped() {
-        
+        startAccountFlow()
     }
     
     func onMoreViewUpgradeTapped() {
-        
+        showUpgradingScreen()
     }
 }
 
@@ -70,6 +78,13 @@ extension MoreCoordinator: MoreViewDelegate {
 //MARK: - AccountCoordinatorDelegate
 extension MoreCoordinator: AccountCoordinatorDelegate {
     func onAccountCoordinatorComplete(coordinator: AccountCoordinator) {
+        free(coordinator: coordinator)
+    }
+}
+
+//MARK: - LocationsCoordinatorDelegate
+extension MoreCoordinator: LocationsCoordinatorDelegate {
+    func onLocationCoordinatorComplete(coordinator: LocationsCoordinator) {
         free(coordinator: coordinator)
     }
 }

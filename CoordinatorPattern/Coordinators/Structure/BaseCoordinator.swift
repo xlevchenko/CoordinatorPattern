@@ -16,9 +16,11 @@ class BaseCoordinator<ControllerType> where ControllerType: UIViewController {
     private(set) var childCoordinators = [UUID: Any]()
     
     var presenter: ControllerType
+    var modelLayer: ModelLayer
     
-    init(presenter: ControllerType) {
+    init(presenter: ControllerType, modelLayer: ModelLayer) {
         self.presenter = presenter
+        self.modelLayer = modelLayer
         
         if let navController = presenter as? UINavigationController {
             enbeddedInExistingNavStack = navController.viewControllers.count > 0
@@ -30,6 +32,11 @@ class BaseCoordinator<ControllerType> where ControllerType: UIViewController {
     }
 }
 
+
+//MARK: - Convenience
+extension BaseCoordinator {
+    var userDefaults: UserDefaultsManager { modelLayer.systemLayer.userDefaults }
+}
 
 //MARK: - Child Coordinator Management
 
